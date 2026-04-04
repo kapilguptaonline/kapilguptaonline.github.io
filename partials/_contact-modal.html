@@ -1,0 +1,92 @@
+<!-- ============================================================
+     PARTIAL: _contact-modal.html
+     Paste once before </body> on every page that needs the CTA.
+     ============================================================ -->
+<div class="modal fade" id="contactModal" tabindex="-1"
+     aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <div>
+          <p class="mb-0" style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);">Get in touch</p>
+          <h5 class="modal-title" id="contactModalLabel">Transform Your Business Operations</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Success Flash -->
+        <div id="successFlash" class="success-flash">
+          <div class="success-icon">✅</div>
+          <p>Message sent successfully!</p>
+          <p style="font-size:.85rem;font-weight:400;color:#065f46;margin-top:.25rem;">
+            I'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form id="contactForm" novalidate>
+          <div id="formFields">
+            <div class="row g-3">
+
+              <div class="col-sm-6">
+                <label class="form-label" for="ctName">Your Name *</label>
+                <input type="text" class="form-control" id="ctName" name="name"
+                       placeholder="Rajan Mehra" required>
+              </div>
+
+              <div class="col-sm-6">
+                <label class="form-label" for="ctCompany">Company / Startup</label>
+                <input type="text" class="form-control" id="ctCompany" name="company"
+                       placeholder="Acme Pvt. Ltd.">
+              </div>
+
+              <div class="col-sm-6">
+                <label class="form-label" for="ctEmail">Email *</label>
+                <input type="email" class="form-control" id="ctEmail" name="email"
+                       placeholder="you@company.com" required>
+              </div>
+
+              <div class="col-sm-6">
+                <label class="form-label" for="ctPhone">WhatsApp / Phone</label>
+                <input type="tel" class="form-control" id="ctPhone" name="phone"
+                       placeholder="+91 98765 43210">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="ctService">I need help with</label>
+                <select class="form-select" id="ctService" name="service">
+                  <option value="">— Select a service —</option>
+                  <option>Process Automation</option>
+                  <option>ERP Implementation</option>
+                  <option>Operational Architecture</option>
+                  <option>CTO Advisory</option>
+                  <option>Other / Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="ctMessage">Tell me about your challenge *</label>
+                <textarea class="form-control" id="ctMessage" name="message" rows="4"
+                          placeholder="Briefly describe your business challenge or what you'd like to improve…"
+                          required></textarea>
+              </div>
+
+            </div><!-- /row -->
+
+            <div class="d-flex gap-2 justify-content-end mt-4">
+              <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+
+          </div><!-- /formFields -->
+        </form>
+
+      </div><!-- /modal-body -->
+    </div>
+  </div>
+</div>
