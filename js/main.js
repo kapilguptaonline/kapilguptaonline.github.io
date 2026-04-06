@@ -44,8 +44,19 @@ if (contactForm) {
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    // Simulate async send (replace with real endpoint)
-    await new Promise(r => setTimeout(r, 900));
+    // Submit to Formspree
+    const formData = new FormData(contactForm);
+    const res = await fetch('https://formspree.io/f/xzdkypvz', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      alert('Something went wrong. Please try again or email directly.');
+      return;
+    }
 
     // Show success
     formFields.style.display = 'none';
